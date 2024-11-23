@@ -1,0 +1,49 @@
+// Empezamos a crear una base de datos
+use ("baticell_store")
+
+// Eliminar todos los documentos de una colección
+db.products.drop()
+
+// Agregar más de un documento
+db.products.insertMany([
+
+    {
+        _id: 1,
+        name: "Xiaomi",
+        price: 2450
+    },
+
+    {
+        _id: 2,
+        name: "Motorola",
+        price: 2600
+    },
+
+    {
+        _id: 3,
+        name: "Samsung",
+        price: 3000
+    }
+
+])
+
+// Agregar más de un documento
+db.products.insertMany([
+    {
+        name: "Honor",
+        price: 2450,
+        modelo: "Ultra HD"
+    },
+    {
+        _id: 4,
+        name: "Oppo",
+        price: '',
+        color: "verde"
+    }
+])
+
+
+
+// Listar todos los documentos de colección products
+
+db.products.find()
