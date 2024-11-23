@@ -1,0 +1,15 @@
+// Empezamos a crear una base de datos
+use ("baticell_store")
+
+// Cambiar el nombre de Honor por Blackberry
+db.products.updateOne(
+    // Qué documento va a actualizarse
+    { _id: ObjectId('674259a2a6ed4d82a0666cc5')},
+    // Especificar el nuevo valor a cambiar
+    {
+        $set: {name: "Blackberry", price: 2999} // utilizamos operador para actualizar
+    }
+)
+
+// Listar todos los documentos de colección products
+db.products.find()
