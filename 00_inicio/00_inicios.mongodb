@@ -1,0 +1,14 @@
+//PONER USO LA BD
+use("sample_mflix")
+
+//VER LA BD EN USO
+db.getName()
+
+//LISTAR COLECCIONES DE LA BD
+db.getCollectionNames()
+
+//LISTAR DOCUMENTOS DE UNA COLECCION
+db.movies.find()
+
+//CUANTOS DOCUMENTO TIENE MOVIES
+db.movies.find().count()
