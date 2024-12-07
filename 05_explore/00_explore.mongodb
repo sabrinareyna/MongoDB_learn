@@ -1,0 +1,30 @@
+//PONER EN USO LA BD
+use("baticell_store")
+
+//LISTAR COLECCIONES DE BATICELL
+db.getCollectionNames()
+
+
+//--------------------
+//LISTAR DOCUMENTOS DE COLECCION CLIENTES(CLIENTS)
+db.clients.find()
+
+//LISTAR DOCUEMENTOS DE COLECCION PRODUCTOS(PRODUCTS)
+db.products.find()
+
+//LISTAR DOCUEMENTOS DE COLECCION VENDEDORES(SELLERS)
+db.sellers.find()
+
+
+//--------------------
+//CUANTOS CLIENTES HAY EN LA COLECCION CLIENTES?
+db.clients.find().count()
+
+//CUANTOS CLIENTES HAY EN LA COLECCION PRODUCTOS?
+db.products.find().count()
+
+//CUANTOS CLIENTES HAY EN LA COLECCION VENDEDORES?
+db.sellers.find().count()
+
+
+//--------------------
