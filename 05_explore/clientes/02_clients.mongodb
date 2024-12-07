@@ -54,3 +54,23 @@ db.clients.find(
     }
 
 ).sort({ apellidos: -1 })
+
+
+//----------------
+// LISTAR LOS CLIENTES CUYOS PUNTOS ESTÉN COMPRENDIDOS ENTRE 200 Y 300.
+// CONSIDERE VISUALIZAR SÓLO LOS CAMPOS:
+// NOMBRES, APELLIDOS, MODELO FAVORITO, PUNTOS Y SUSCRIPCIONES. 
+// ORDENE POR FECHA DE REGISTRO DE MANERA ASCENDENTE.
+db.clients.find(
+    {
+        puntos: { $gte: 200, $lte: 300 }
+    },
+    {
+        nombre: 1,
+        apellidos: 1,
+        modeloFavorito: 1,
+        fechaRegistro: 1,
+        puntos: 1,
+        suscripciones: 1
+    }
+).sort({ fechaRegistro: 1 })
