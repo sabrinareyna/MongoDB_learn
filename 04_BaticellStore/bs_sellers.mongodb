@@ -55,7 +55,7 @@ db.sellers.insertMany([
         "fechaIngreso": ISODate("2023-10-01T00:00:00Z"),
         "metas": { "ventasMensuales": 48000, "clientesNuevos": 28 },
         "productosPreferidos": ["Nokia 8.3 5G", "Asus ROG Phone 5"]
-    }
+    } 
 ])
 
 // Cantidad de documentos insertados
