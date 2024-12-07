@@ -25,6 +25,3 @@ db.products.find().count()
 
 //CUANTOS CLIENTES HAY EN LA COLECCION VENDEDORES?
 db.sellers.find().count()
-
-
-//--------------------
