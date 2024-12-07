@@ -61,10 +61,8 @@ db.products.find(
 // cuya capacidad de almacenamiento sea 256 GB y el precio sea menor o igual que 1000
 db.products.find(
     {
-        $and: [
-            { "especificaciones.almacenamiento": "256 GB", },
-            { precio_unitario: { $lte: 1000 } }
-        ]
+        "especificaciones.almacenamiento": "256 GB",
+        precio_unitario: { $lte: 1000 }    
     }, // aquí se establece las condiciones
     {
         nombre: 1,
