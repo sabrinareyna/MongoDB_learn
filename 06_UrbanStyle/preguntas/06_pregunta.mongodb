@@ -1,3 +1,6 @@
+//USAR LA BD
+use("UrbanStyle_store")
+
 //Listar sólo los nombres, apellidos y fecha de ingreso (sin “_id”)
 //Ordenada en descendente por apellidos. 
 // Filtre sólo los vendedores cuya cantidad de clientes nuevos que atienden sean menores e iguales que 20.

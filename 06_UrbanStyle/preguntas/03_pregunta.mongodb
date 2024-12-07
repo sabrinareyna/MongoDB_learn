@@ -1,1 +1,17 @@
+//USAR LA BD
+use("UrbanStyle_store")
+
 //Listar de los productos _id, nombre, marca, talla y precio de las prendas, filtre cuya sucursal sea “Sucursal Norte” y el precio sea mayor igual a 100.
+db.products.find(
+    {
+        "sucursal": "Sucursal Norte",
+        precio: { $lt: 100 }
+    },
+    {
+        _id: 1,
+        nombre: 1,
+        marca: 1,
+        talla: 1,
+        precio: 1
+    }
+)
