@@ -12,3 +12,8 @@ db.clients.find(
 )
 
 
+//LISTAR CLIENTES PROCEDENTES DE SAN LUIS O SAN BORAJA
+db.clients.find(
+    { direccion: { $regex: "SanLuis|San Borja"}}
+)
+
