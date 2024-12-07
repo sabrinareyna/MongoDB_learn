@@ -1,6 +1,7 @@
 //PONER EN USO LA BD
 use("baticell_store")
 
+
 //-------------------
 //LISTAR CLIENTES PROCEDENTES DE SAN BORJA
 db.clients.find(
@@ -23,7 +24,6 @@ db.clients.find(
     { direccion: { $regex: "Miraflores|La Molina"}}
 )
 
-//-------------------
 //LISTAR TODOS LOS CLIENTES EXCEPTO LOS DE BREÑA Y LA MOLINA
 db.clients.find(
     { direccion: {$not: { $regex: "Breña|La Molina" }}}
