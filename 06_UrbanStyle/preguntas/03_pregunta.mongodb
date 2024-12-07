@@ -1,0 +1,1 @@
+//Listar de los productos _id, nombre, marca, talla y precio de las prendas, filtre cuya sucursal sea “Sucursal Norte” y el precio sea mayor igual a 100.
