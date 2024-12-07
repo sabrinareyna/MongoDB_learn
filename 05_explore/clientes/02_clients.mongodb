@@ -17,3 +17,21 @@ db.clients.find(
         _id: 0
     }
 ).sort({ nombre: 1 }) // 1 (ascendente) | -1 (descendente)
+
+//----------------
+//LISTAR CLIENTES PROCEDENTES DE SAN LUIS O SAN BORJA
+//SÓLO LOS ATRIBUTOS: NOMBRE, APELLIDOS, EMAIL, SUSCRIPCIONES Y PUNTOS
+//ORDENADO DE FORMA DESCENDENTE POR PUNTOS.
+db.clients.find(
+    {
+        direccion: { $regex: "San Luis|San Borja" }
+    },
+    {
+        nombre: 1,
+        apellidos: 1,
+        email: 1,
+        suscripciones: 1,
+        puntos: 1,
+        _id: 0
+    }
+).sort({ puntos: -1 })
