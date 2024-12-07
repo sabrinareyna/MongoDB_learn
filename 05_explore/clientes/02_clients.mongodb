@@ -1,0 +1,19 @@
+//PONER EN USO LA BD
+use("baticell_store")
+
+//----------------
+//LISTAR CLIENTES PROCEDENTES DE SAN LUIS O SAN BORJA
+//SOLO LOS ATRIBUTOS: NOMBRE, APELLIDOS, EMAIL Y SUSCRIPPCIONES
+//ORDENADO POR NOMBRES DE FORMA ASCENDENTE
+db.clients.find(
+    {
+        direccion: { $regex: "San Luis|San Borja" }
+    },
+    {
+        nombre: 1,
+        apellidos: 1,
+        email: 1,
+        suscripciones: 1,
+        _id: 0
+    }
+).sort({ nombre: 1 }) // 1 (ascendente) | -1 (descendente)
