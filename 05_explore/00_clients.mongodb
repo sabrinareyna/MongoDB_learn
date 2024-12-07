@@ -1,2 +1,12 @@
 //PONER EN USO LA BD
 use("baticell_store")
+
+//LISTAR CLIENTES PROCEDENTES DE SAN BORJA
+db.clients.find(
+    { "direccion": { $regex: 'San Borja'} }
+)
+
+//LISTAR CLIENTES PROCEDENTES DE SURCO
+db.clients.find(
+    { "direccion": { $regex: 'Surco'} }
+)
