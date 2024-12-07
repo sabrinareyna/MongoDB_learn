@@ -35,3 +35,22 @@ db.clients.find(
         _id: 0
     }
 ).sort({ puntos: -1 })
+
+
+//----------------
+// LISTAR NOMBRES, APELLIDOS, EMAIL Y SUSCRIPCIONES DE CLIENTES
+// QUE NO VIVEN EN BREÑA O LA MOLINA
+// ORDENAR POR APELLIDOS DE MANERA DESCENDENTE.
+db.clients.find(
+    {
+        "direccion": { $not: { $regex: "Breña|La Molina" } }
+    },
+    {
+        nombre: 1,
+        apellidos: 1,
+        email: 1,
+        suscripciones: 1,
+        _id: 0
+    }
+
+).sort({ apellidos: -1 })
